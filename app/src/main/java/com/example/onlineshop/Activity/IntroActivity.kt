@@ -1,4 +1,4 @@
-package com.example.onlineshop
+package com.example.onlineshop.Activity
 
 import android.content.Intent
 import android.os.Bundle
@@ -24,17 +24,16 @@ import androidx.compose.ui.Alignment
 
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.input.pointer.PointerIcon.Companion.Text
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.text.input.KeyboardType.Companion.Text
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.onlineshop.R
 
 
 class IntroActivity : BaseActivity() {
@@ -71,7 +70,7 @@ fun IntroScreen(onClick: () -> Unit ={}) {
 
         )
         Spacer(modifier = Modifier.height(32.dp))
-Text(text = stringResource(id=R.string.intro_title),
+Text(text = stringResource(id= R.string.intro_title),
     modifier = Modifier.padding(top= 16.dp),
     fontSize = 24.sp,
     fontWeight = FontWeight.Bold,
