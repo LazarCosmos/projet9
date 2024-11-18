@@ -2,8 +2,6 @@ package com.example.onlineshop.Activity
 
 import android.os.Bundle
 import androidx.activity.compose.setContent
-import androidx.activity.enableEdgeToEdge
-import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -37,20 +35,18 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.constraintlayout.compose.ConstraintLayout
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import coil.compose.rememberAsyncImagePainter
 import com.example.onlineshop.Helper.ChangeNumberItemsListener
 import com.example.onlineshop.Helper.ManagmentCart
 import com.example.onlineshop.Model.ItemsModel
 import com.example.onlineshop.R
 
+
 class CartActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        setContent{ CartScreen(
-            ManagmentCart(this),
+        setContent{ CartScreen(ManagmentCart(this),
             onBackClick = {
                 finish()
             }
@@ -223,7 +219,7 @@ fun CartList(cartItems:ArrayList<ItemsModel>,
 @Composable
 fun CartItem(
     cartItems:ArrayList<ItemsModel>,
-    item:ItemsModel,managmentCart: ManagmentCart,
+    item:ItemsModel, managmentCart: ManagmentCart,
     onItemchange: () -> Unit
 
 ) {

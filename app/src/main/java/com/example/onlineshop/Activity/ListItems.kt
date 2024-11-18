@@ -89,10 +89,10 @@ fun RecommendedItem(items: List<ItemsModel>, pos: Int) {
                 .height(175.dp)
                 .padding(8.dp)
                 .clickable {
-//                    val intent= Intent(context, DetailActivity::class.java).apply {
-//                        putExtra("object",items[pos])
-//                    }
-//                    startActivity(context,intent,null)
+                    val intent= Intent(context, DetailActivity::class.java).apply {
+                        putExtra("object",items[pos])
+                    }
+                    startActivity(context,intent,null)
                 },
             contentScale = ContentScale.Inside
         )
